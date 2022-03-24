@@ -16,7 +16,7 @@ async function setActivity() {
         videoLength = utils.getVideoLength(video.duration);
         client.setActivity({
             details: `Watching: ${video.title}`,
-            startTimestamp: Date.now(),
+            endTimestamp: Date.now() + videoLength,
             largeImageKey: "ph_icon",
             instance: true,
             joinSecret: "025ed05c71f639de8bfaa0d679d7c94b2fdce12f",
